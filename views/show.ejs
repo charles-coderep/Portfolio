@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+
+    <body class="blog">
+        <header>
+            <div class="headwrap">
+                <%- include('./partials/nav.ejs') %>
+                    <div class="logo"></div>
+            </div>
+        </header>
+        <main>
+            <div class="section-container">
+                <h2 class="observe">
+                    <%= blogPost.title %>
+                </h2>
+                <div>
+                    <%- blogPost.html %>
+                </div>
+                <div>
+                    <a class="btn" href="/blog/">All</a>
+                    <% if (id) { %>
+                        <a class="btn" href="/blog/edit/<%= blogPost.id %>">Edit</a>
+                        <% } %>
+                </div>
+        </main>
+        <%- include('./partials/footer.ejs') %>
+    </body>
+
+</html>

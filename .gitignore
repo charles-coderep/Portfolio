@@ -1,0 +1,10 @@
+node_modules
+to-remind.code-workspace
+package-lock.json
+gulpfile.js
+dev/src
+dev
+src
+scss
+.env
+env

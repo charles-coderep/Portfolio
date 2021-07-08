@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+
+  <body class="blog">
+    <header>
+      <div class="headwrap">
+        <%- include('./partials/nav.ejs') %>
+          <div class="logo"></div>
+      </div>
+    </header>
+    <main>
+      <div class="section-container">
+        <h2 class="observe">BLOG</h2>
+        <div class="blog-snippet-wrap">
+          <% if (blogs.length> 0) { blogs.forEach(blog=> { %> <div class="blog-control-buttons-wrap">
+              <a href="<%= blog.slug %>">
+                <div class="blog-snippet">
+                  <h3>
+                    <%= blog.title %>
+                  </h3>
+                  <p>
+                    <%= blog.snippet %>
+                  </p>
+                </div>
+              </a>
+              <% if (id) { %>
+                <form class="delete" action="/blog/<%= blog.id %>?_method=DELETE" method="POST">
+                  <button type="submit" class="btn">Delete</button>
+                </form>
+                <div class="edit"> <a class="btn" href="/blog/edit/<%= blog.id %>">Edit</a></div>
+                <% }%>
+            </div>
+            <% }) %>
+              <% } else { %>
+                <p>"No blogs yet"</p>
+                <% } %>
+        </div>
+      </div>
+    </main>
+    <%- include('./partials/footer.ejs') %>
+  </body>
+
+</html>

@@ -1,0 +1,14 @@
+<ul>
+    <li>
+        <input required type="text" value="<%= blogPost.title %>" name="title" placeholder="Blog title" id="title" />
+    </li>
+    <li>
+        <textarea required type="text" name="markdown" placeholder="Markdown"
+            id="markdown"><%= blogPost.markdown %></textarea>
+    </li>
+    <li>
+        <input required type="text" value="<%= blogPost.snippet %>" name="snippet" placeholder="Blog snippet" id="date"
+            min="" />
+    </li>
+    <button class="btn" required id="button" type="submit">Submit</button>
+</ul>
