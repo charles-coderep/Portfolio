@@ -27,7 +27,7 @@ router.get("/create", authRoute, (req, res) => {
   res.render('create', { title: 'Create new blog', blogPost: new Blog() });
 });
 
-/* Conditional route, depending on user*/
+/* Conditional route, depending on user */
 
 router.get("/:slug", checkUser, (req, res) => {
   Blog.findOne({ slug: req.params.slug }).
