@@ -55,6 +55,8 @@ h2.observe {
   padding-bottom: 0.45em;
   transform: translateX(80px);
   justify-content: center;
+  text-align: center;
+  line-height: 1.5;
 }
 
 h2.observe.animate {
@@ -195,7 +197,7 @@ header .logo:hover .front {
 
 
 100% {  transform: rotate3d(1, 0, 0, 
-  -1800deg);}
+  -2600deg);}
 
 }
 
