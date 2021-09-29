@@ -16,10 +16,10 @@ app.use(cookieParser());
 /*Register view engine*/
 app.set('view engine', 'ejs');
 
-/* Handle Favicon */
+/* Handle Favicon 
 app.get('/favicon.ico', (req, res) => {
   res.sendStatus(204);
-});
+});*/
 
 const port = process.env.PORT || 3000; // connect to 3000 or any other port thats available
 app.listen(port, () => {
