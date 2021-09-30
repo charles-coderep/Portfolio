@@ -178,7 +178,7 @@ header .logo {
 }
 
 header .logo:hover {
-  animation: 30s cubic-bezier(0.115, -0.115, 0.895, 1.115) 0.1s infinite normal spin-logo;
+  animation: 30s cubic-bezier(0.165, 0.025, 0.895, 1.105) 0.1s infinite normal spin-logo;
 }
 
 header .logo:hover div {
@@ -197,7 +197,7 @@ header .logo:hover .front {
 
 
 100% {  transform: rotate3d(1, 0, 0, 
-  -3500deg);}
+  -8000deg);}
 
 }
 
